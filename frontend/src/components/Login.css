@@ -1,94 +1,99 @@
-/* App.css */
+/* Login.css */
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f5f5f5; /* light background */
 }
 
-.form-container {
-  background-color: #fff;
-  max-width: 400px;
+.login-container {
+  width: 400px;
   margin: 80px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  background-color: #ffffff; /* white card */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  color: #000000; /* black text */
 }
 
-.form-container h2 {
-  color: #4b0082; /* purple */
+.login-container h2 {
   margin-bottom: 10px;
+  color: #4b0082; /* purple heading */
 }
 
-.form-container p {
-  color: #333; /* dark text */
-  margin-bottom: 20px;
+.login-container p {
+  margin-bottom: 30px;
+  color: #333333; /* slightly lighter black */
 }
 
-label {
-  display: block;
+.login-container form {
+  display: flex;
+  flex-direction: column;
   text-align: left;
+}
+
+.login-container label {
   margin-bottom: 5px;
-  color: #333;
   font-weight: bold;
+  color: #4b0082; /* purple labels */
 }
 
-input[type="email"],
-input[type="password"],
-select {
-  width: 100%;
+.login-container input,
+.login-container select {
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-input:focus,
-select:focus {
-  border-color: #4b0082;
+.login-container input:focus,
+.login-container select:focus {
   outline: none;
+  border-color: #4b0082; /* purple focus */
+  box-shadow: 0 0 5px rgba(75, 0, 130, 0.5);
 }
 
-.remember-forgot {
+.options {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 0.9em;
+  font-size: 14px;
 }
 
-.remember-forgot .link {
-  color: #4b0082;
-  cursor: pointer;
+.options a {
+  color: #4b0082; /* purple link */
+  text-decoration: none;
+}
+
+.options a:hover {
   text-decoration: underline;
 }
 
-.btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #4b0082;
-  color: #fff;
+button[type="submit"] {
+  background-color: #4b0082; /* purple button */
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
-  font-size: 1em;
+  padding: 12px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #6a0dad; /* lighter purple */
+button[type="submit"]:hover {
+  background-color: #6a0dad; /* slightly lighter purple */
 }
 
-.switch-text {
-  margin-top: 15px;
-  font-size: 0.9em;
-  color: #333;
-}
-
-.switch-text span {
+.login-container p a {
   color: #4b0082;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-container p a:hover {
   text-decoration: underline;
 }
