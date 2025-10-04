@@ -151,7 +151,7 @@ const EmployeeView = () => {
     .reduce((sum, expense) => sum + expense.amount, 0);
 
   return (
-    
+
     <div className="employee-expense">
       <header className="expense-header">
         <div className="container">
@@ -248,6 +248,7 @@ const EmployeeView = () => {
                 <label htmlFor="category">Category</label>
                 <select
                   id="category"
+                  className='category-box'
                   name="category"
                   value={formData.category}
                   onChange={handleInputChange}

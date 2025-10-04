@@ -179,7 +179,8 @@ body, html {
 label {
   font-weight: 600;
   color: #333;
-  margin-bottom: 0.3rem;
+  /* margin-bottom: 0.3rem; */
+  /* margin-top: 10px; */
 }
 
 input,
@@ -338,4 +339,8 @@ tr:hover {
   .stat-item {
     flex: 1 1 100%;
   }
+}
+
+.category-box{
+    margin-top: 10px;
 }
