@@ -1,26 +1,29 @@
 import React, { useState } from "react";
+import AdminView from "./AdminView";
+import { useNavigate } from "react-router";
 
 const Login = ({ onSignupClick, onLoginSuccess, onForgotClick }) => {
+  const navigate = useNavigate(); // ✅ Add this
   const [role, setRole] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!role) {
-      alert("Please select a role!");
-      return;
-    }
+  if (!role) {
+    alert("Please select a role!");
+    return;
+  }
 
-    if (role !== "Admin") {
-      alert("Only Admin can log in. Contact your Admin for access.");
-      return;
-    }
+  // Simulate login success
+  alert(`Logged in successfully as ${role}`);
+  onLoginSuccess(role);
 
-    alert(`Logged in successfully as ${role}`);
-    onLoginSuccess(role);
-  };
+  // Redirect to dashboard for role-based navigation
+  navigate("/dashboard");
+};
+
 
   return (
     <div className="form-container">
@@ -63,7 +66,7 @@ const Login = ({ onSignupClick, onLoginSuccess, onForgotClick }) => {
           </span>
         </div>
 
-        <button type="submit" className="btn">Sign In</button>
+        <button type="submit" className="btn" >Sign In</button>
 
         <p className="switch-text">
           Don’t have an account?{" "}
