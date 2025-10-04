@@ -2,7 +2,7 @@
 
 
 import React, { useState, useEffect } from 'react';
-
+import './Employee.css';
 
 const EmployeeView = () => {
   const [expenses, setExpenses] = useState([]);
@@ -151,6 +151,7 @@ const EmployeeView = () => {
     .reduce((sum, expense) => sum + expense.amount, 0);
 
   return (
+    
     <div className="employee-expense">
       <header className="expense-header">
         <div className="container">
