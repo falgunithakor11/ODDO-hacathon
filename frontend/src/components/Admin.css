@@ -1,0 +1,234 @@
+.admin-view {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.admin-header {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin-header h1 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.admin-capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.admin-capabilities span {
+  background: #e3f2fd;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: #1976d2;
+}
+
+.admin-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.user-management-section,
+.approval-rules-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.create-user-form {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.form-input,
+.form-select,
+.dynamic-dropdown,
+.percentage-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-input {
+  flex: 1;
+  min-width: 150px;
+}
+
+.form-select {
+  min-width: 120px;
+}
+
+.btn-primary {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #1565c0;
+}
+
+.btn-secondary {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-more {
+  background: transparent;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.users-table th,
+.users-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.users-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.rule-field,
+.sequence-setting,
+.approval-percentage {
+  margin-bottom: 20px;
+}
+
+.rule-field label,
+.sequence-setting label,
+.approval-percentage label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.rule-field small,
+.sequence-setting small,
+.approval-percentage small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+}
+
+.approvers-list {
+  margin: 20px 0;
+}
+
+.approver-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.approver-number {
+  font-weight: bold;
+  min-width: 20px;
+}
+
+.approver-type {
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.approver-required {
+  color: #d32f2f;
+  font-size: 12px;
+  min-width: 70px;
+}
+
+.approver-policy {
+  color: #666;
+  font-size: 12px;
+}
+
+.field-note {
+  background: #fff3e0;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 15px 0;
+  border-left: 4px solid #ff9800;
+}
+
+.field-note p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.btn-save-rules {
+  background: #388e3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-save-rules:hover {
+  background: #2e7d32;
+}
+
+@media (max-width: 768px) {
+  .admin-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .form-input,
+  .form-select {
+    width: 100%;
+  }
+}
